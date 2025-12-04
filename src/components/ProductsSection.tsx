@@ -95,7 +95,7 @@ const ProductsSection = () => {
                   <div 
                     key={index} 
                     className="flex-[0_0_auto] min-w-0"
-                    style={{ maxWidth: '370px', paddingRight: '30px' }}
+                    style={{ width: '400px', paddingRight: '30px' }}
                   >
                     <div className="relative rounded-xl overflow-hidden group cursor-pointer" style={{ width: '370px' }}>
                       <img
