@@ -11,7 +11,7 @@ const features = [
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-32 pb-32">
+    <section className="relative min-h-screen flex flex-col justify-end pb-[50px]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -42,21 +42,21 @@ const HeroSection = () => {
         </div>
 
         {/* Feature Cards - Glassmorphism Style */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-[30px]">
           {features.map((feature, index) => (
             <div 
               key={feature.label}
-              className="backdrop-blur-md bg-white/15 border border-white/20 rounded-lg shadow-lg p-6 animate-fade-in"
+              className="backdrop-blur-md bg-white/15 border border-white/20 rounded-lg shadow-lg p-6 animate-fade-in text-center"
               style={{ 
                 animationDelay: `${0.6 + index * 0.1}s`,
                 boxShadow: '0 4px 16px rgba(0,0,0,0.2)'
               }}
             >
-              <div className="h-11 mb-4">
+              <div className="h-11 mb-4 flex justify-center">
                 <img src={feature.icon} alt={feature.label} className="h-11 w-auto object-contain" />
               </div>
-              <h3 className="font-heebo font-bold text-xl text-card mb-2">{feature.label}</h3>
-              <p className="font-rubik text-sm text-card/80">{feature.description}</p>
+              <h3 className="font-heebo font-semibold text-2xl text-card mb-2">{feature.label}</h3>
+              <p className="font-rubik text-base font-light text-card/80" style={{ lineHeight: '1.3' }}>{feature.description}</p>
             </div>
           ))}
         </div>
