@@ -99,6 +99,10 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-heebo font-bold tracking-tight;
   }
+
+  h2 {
+    line-height: 120%;
+  }
 }
 
 @layer components {
