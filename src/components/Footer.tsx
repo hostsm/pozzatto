@@ -50,15 +50,15 @@ const Footer = () => {
           {/* Languages & Social */}
           <div>
             <h4 className="font-heebo font-bold mb-4">Idiomas</h4>
-            <div className="flex gap-3 mb-6">
-              <button className="flex items-center gap-1 text-sm font-light opacity-80 hover:opacity-100 transition-opacity">
-                🇧🇷 PT
+            <div className="flex gap-2 mb-6">
+              <button className="text-2xl hover:scale-110 transition-transform" title="Português">
+                🇧🇷
               </button>
-              <button className="flex items-center gap-1 text-sm font-light opacity-80 hover:opacity-100 transition-opacity">
-                🇪🇸 ES
+              <button className="text-2xl hover:scale-110 transition-transform" title="Español">
+                🇪🇸
               </button>
-              <button className="flex items-center gap-1 text-sm font-light opacity-80 hover:opacity-100 transition-opacity">
-                🇺🇸 EN
+              <button className="text-2xl hover:scale-110 transition-transform" title="English">
+                🇺🇸
               </button>
             </div>
             <h4 className="font-heebo font-bold mb-4">Redes Sociais</h4>
