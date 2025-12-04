@@ -76,7 +76,7 @@ const ProductsSection = () => {
             <span className="font-rubik text-sm font-medium text-primary uppercase tracking-wider mb-3">
               Linha De Produtos
             </span>
-            <h2 className="font-heebo text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="font-heebo text-[42px] font-bold text-foreground mb-4">
               Nossos Produtos
             </h2>
             <p className="font-rubik text-base font-light text-muted-foreground leading-relaxed mb-6">

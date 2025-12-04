@@ -26,7 +26,7 @@ const BlogSection = () => {
     <section id="blog" className="section-spacing bg-muted">
       <div className="container-custom">
         <div className="text-center mb-12">
-          <h2 className="font-heebo text-3xl md:text-4xl font-bold text-foreground">
+          <h2 className="font-heebo text-[42px] font-bold text-foreground">
             Blog & Notícias
           </h2>
         </div>

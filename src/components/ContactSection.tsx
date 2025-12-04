@@ -5,8 +5,8 @@ const ContactSection = () => {
     <section id="contact" className="section-spacing">
       <div className="container-custom">
         <div className="text-center max-w-2xl mx-auto">
-          <h2 className="font-heebo text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Fale com nosso time internacional
+          <h2 className="font-heebo text-[42px] font-bold text-foreground mb-4">
+            Fale Com Nosso Time Internacional
           </h2>
           <p className="font-rubik text-base font-light text-muted-foreground mb-8">
             Entre em contato conosco para saber mais sobre nossos produtos e serviços de exportação.

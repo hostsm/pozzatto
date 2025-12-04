@@ -14,8 +14,8 @@ const CertificationsSection = () => {
     <section id="certifications" className="section-spacing bg-muted">
       <div className="container-custom">
         <div className="text-center mb-12">
-          <h2 className="font-heebo text-3xl md:text-4xl font-bold text-foreground">
-            Certificações que fortalecem nossa credibilidade
+          <h2 className="font-heebo text-[42px] font-bold text-foreground">
+            Certificações Que Fortalecem Nossa Credibilidade
           </h2>
         </div>
 
