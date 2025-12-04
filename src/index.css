@@ -82,6 +82,12 @@
 }
 
 @layer base {
+  *,
+  *::before,
+  *::after {
+    border-style: none;
+  }
+
   * {
     @apply border-border;
   }
