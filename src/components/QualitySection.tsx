@@ -1,5 +1,6 @@
 import { Users, Beaker, Microscope, ClipboardCheck, Truck, ShieldCheck } from 'lucide-react';
 import qualityImage from '@/assets/quality-control.jpg';
+import SessaoTitle from './SessaoTitle';
 
 const steps = [
   { icon: Users, label: 'Apicultor' },
@@ -15,16 +16,11 @@ const QualitySection = () => {
     <section id="quality" className="section-spacing">
       <div className="container-custom">
         <div className="text-center mb-12">
-          <div className="sessao-title mb-4">
-            <div className="label">
-              {/* Label futura */}
-            </div>
-            <div className="subtitle">
-              <h2 className="font-heebo text-[42px] font-bold text-foreground leading-tight">
-                Qualidade Garantida Em Cada Etapa
-              </h2>
-            </div>
-          </div>
+          <SessaoTitle
+            title="Qualidade Garantida Em Cada Etapa"
+            centered
+            className="mb-4"
+          />
           <p className="font-rubik text-base font-light text-muted-foreground max-w-2xl mx-auto">
             Monitoramos cada etapa com rigor técnico e transparência, garantindo segurança e precisão em todo o processo produtivo.
           </p>
