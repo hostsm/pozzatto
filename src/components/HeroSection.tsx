@@ -9,7 +9,7 @@ const features = [
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center">
+    <section className="relative min-h-screen flex items-center pt-32">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
