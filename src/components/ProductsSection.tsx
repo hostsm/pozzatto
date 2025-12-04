@@ -73,7 +73,7 @@ const ProductsSection = () => {
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
           {/* Left Column - 1/3 */}
           <div className="lg:w-1/3 flex flex-col justify-center">
-            <span className="font-rubik text-sm font-medium text-primary uppercase tracking-wider mb-3">
+            <span className="font-rubik text-sm font-medium text-primary tracking-wider mb-3">
               Linha De Produtos
             </span>
             <h2 className="font-heebo text-[42px] font-bold text-foreground mb-4 leading-tight">
