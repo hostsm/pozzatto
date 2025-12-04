@@ -46,9 +46,14 @@ const HeroSection = () => {
           {features.map((feature, index) => (
             <div 
               key={feature.label}
-              className="backdrop-blur-md bg-white/15 border border-white/20 rounded-lg shadow-lg p-6 animate-fade-in text-center"
+              className="backdrop-blur-md rounded-lg p-6 animate-fade-in text-center transition-all duration-300"
               style={{ 
                 animationDelay: `${0.6 + index * 0.1}s`,
+                backgroundColor: 'transparent',
+                backgroundImage: 'radial-gradient(at top right, #9B9B9B78 0%, #B3B3B32B 53%)',
+                borderStyle: 'solid',
+                borderWidth: '1px',
+                borderColor: '#D7D7D733',
                 boxShadow: '0 4px 16px rgba(0,0,0,0.2)'
               }}
             >
