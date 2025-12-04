@@ -2,31 +2,37 @@ import { useEffect, useState, useCallback } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 
+import linhaMesa from '@/assets/linha-mesa.png';
+import linhaOrganica from '@/assets/linha-organica.png';
+import linhaSuplemento from '@/assets/linha-suplemento.png';
+import linhaCompostos from '@/assets/linha-compostos.png';
+import linhaGranel from '@/assets/linha-granel.png';
+
 const products = [
   {
-    image: 'https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=600&h=500&fit=crop',
-    title: 'Mel Puro',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    image: linhaMesa,
+    title: 'Linha Mesa',
+    description: 'Mel puro e natural para o dia a dia da sua família.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&h=500&fit=crop',
-    title: 'Mel Orgânico',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    image: linhaOrganica,
+    title: 'Linha Orgânica',
+    description: 'Mel certificado orgânico, livre de agrotóxicos.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1471943311424-646960669fbc?w=600&h=500&fit=crop',
-    title: 'Mel Silvestre',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    image: linhaSuplemento,
+    title: 'Linha Suplemento',
+    description: 'Produtos apícolas para saúde e bem-estar.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1607530933687-5c63c6b0ea58?w=600&h=500&fit=crop',
-    title: 'Mel Composto',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    image: linhaCompostos,
+    title: 'Linha Compostos',
+    description: 'Mel combinado com ingredientes naturais funcionais.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1612537785954-5b4e4e0b4b2d?w=600&h=500&fit=crop',
-    title: 'Própolis',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    image: linhaGranel,
+    title: 'Linha à Granel',
+    description: 'Mel em grandes volumes para indústrias e distribuidores.',
   },
 ];
 
