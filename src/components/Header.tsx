@@ -69,9 +69,10 @@ const Header = () => {
             <img 
               src={logoPozzatto} 
               alt="Pozzatto - Apiário Padre Assis" 
-              className={`h-12 w-auto transition-all duration-300 ${
+              className={`w-auto transition-all duration-300 ${
                 isScrolled ? '' : 'brightness-0 invert'
-              }`} 
+              }`}
+              style={{ height: '54px' }}
             />
           </a>
 
