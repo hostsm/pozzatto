@@ -5,9 +5,16 @@ const ContactSection = () => {
     <section id="contact" className="section-spacing">
       <div className="container-custom">
         <div className="text-center max-w-2xl mx-auto">
-          <h2 className="font-heebo text-[42px] font-bold text-foreground mb-4">
-            Fale Com Nosso Time Internacional
-          </h2>
+          <div className="sessao-title mb-4">
+            <div className="label">
+              {/* Label futura */}
+            </div>
+            <div className="subtitle">
+              <h2 className="font-heebo text-[42px] font-bold text-foreground leading-tight">
+                Fale Com Nosso Time Internacional
+              </h2>
+            </div>
+          </div>
           <p className="font-rubik text-base font-light text-muted-foreground mb-8">
             Entre em contato conosco para saber mais sobre nossos produtos e serviços de exportação.
           </p>

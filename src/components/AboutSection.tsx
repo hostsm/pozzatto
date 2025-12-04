@@ -10,12 +10,18 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 mb-16" style={{ gap: '40px' }}>
           {/* Left Column - Title and CTA */}
           <div>
-            <span className="font-rubik text-sm font-medium text-primary tracking-wider mb-4 block">
-              Quem Somos
-            </span>
-            <h2 className="font-heebo text-[42px] font-bold text-foreground mb-8 leading-tight">
-              50 Anos de Tradição, Naturalidade e Qualidade Que Atravessam Fronteiras.
-            </h2>
+            <div className="sessao-title mb-8">
+              <div className="label">
+                <span className="font-rubik text-sm font-medium text-primary tracking-wider">
+                  Quem Somos
+                </span>
+              </div>
+              <div className="subtitle">
+                <h2 className="font-heebo text-[42px] font-bold text-foreground leading-tight">
+                  50 Anos de Tradição, Naturalidade e Qualidade Que Atravessam Fronteiras.
+                </h2>
+              </div>
+            </div>
             <a href="#about" className="btn-primary inline-block">
               Conheça a Pozzatto
             </a>
