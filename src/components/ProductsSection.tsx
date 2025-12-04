@@ -97,27 +97,27 @@ const ProductsSection = () => {
                     className="flex-[0_0_auto] min-w-0"
                     style={{ width: '400px', paddingRight: '30px' }}
                   >
-                    <div className="relative rounded-xl overflow-hidden group cursor-pointer" style={{ width: '370px' }}>
-                      <img
-                        src={product.image}
-                        alt={product.title}
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                        style={{ width: '370px', height: '390px' }}
-                      />
-                      {/* Overlay Box */}
-                      <div className="absolute bottom-0 left-0 right-0 bg-primary p-5 rounded-t-xl">
+                    <div className="cursor-pointer group" style={{ width: '370px' }}>
+                      {/* Imagem */}
+                      <div className="rounded-xl overflow-hidden">
+                        <img
+                          src={product.image}
+                          alt={product.title}
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                          style={{ width: '370px', height: '390px' }}
+                        />
+                      </div>
+                      {/* Box de Informações */}
+                      <div 
+                        className="bg-primary rounded-xl relative z-10 mx-[15px] py-4 px-4"
+                        style={{ marginTop: '-50px' }}
+                      >
                         <h3 className="font-heebo text-xl font-bold text-primary-foreground mb-1">
                           {product.title}
                         </h3>
-                        <p className="font-rubik text-sm font-light text-primary-foreground/90 mb-3 line-clamp-2">
+                        <p className="font-rubik text-sm font-light text-primary-foreground/90 line-clamp-2">
                           {product.description}
                         </p>
-                        <a 
-                          href="#" 
-                          className="font-rubik text-sm font-medium text-primary-foreground hover:underline inline-flex items-center gap-1"
-                        >
-                          Saiba Mais
-                        </a>
                       </div>
                     </div>
                   </div>
