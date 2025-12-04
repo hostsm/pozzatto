@@ -76,8 +76,8 @@ const ProductsSection = () => {
             <span className="font-rubik text-sm font-medium text-primary uppercase tracking-wider mb-3">
               Linha De Produtos
             </span>
-            <h2 className="font-heebo text-[42px] font-bold text-foreground mb-4">
-              Nossos Produtos
+            <h2 className="font-heebo text-[42px] font-bold text-foreground mb-4 leading-tight">
+              Conheça Nossa Linha De Produtos Para Exportação
             </h2>
             <p className="font-rubik text-base font-light text-muted-foreground leading-relaxed mb-6">
               Lorem ipsum dolor sit amet, consectetur elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
@@ -94,13 +94,15 @@ const ProductsSection = () => {
                 {products.map((product, index) => (
                   <div 
                     key={index} 
-                    className="flex-[0_0_50%] min-w-0 pr-6"
+                    className="flex-[0_0_auto] min-w-0 pr-6"
+                    style={{ maxWidth: '370px' }}
                   >
-                    <div className="relative rounded-xl overflow-hidden group cursor-pointer">
+                    <div className="relative rounded-xl overflow-hidden group cursor-pointer" style={{ width: '370px' }}>
                       <img
                         src={product.image}
                         alt={product.title}
-                        className="w-full h-[320px] object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        style={{ width: '370px', height: '390px' }}
                       />
                       {/* Overlay Box */}
                       <div className="absolute bottom-0 left-0 right-0 bg-primary p-5 rounded-t-xl">
