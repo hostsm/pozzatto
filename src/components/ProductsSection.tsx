@@ -94,8 +94,8 @@ const ProductsSection = () => {
                 {products.map((product, index) => (
                   <div 
                     key={index} 
-                    className="flex-[0_0_auto] min-w-0 pr-6"
-                    style={{ maxWidth: '370px' }}
+                    className="flex-[0_0_auto] min-w-0"
+                    style={{ maxWidth: '370px', paddingRight: '30px' }}
                   >
                     <div className="relative rounded-xl overflow-hidden group cursor-pointer" style={{ width: '370px' }}>
                       <img
