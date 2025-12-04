@@ -55,7 +55,7 @@ const AboutSection = () => {
               />
               
               {/* Badge Element */}
-              <div className="absolute -bottom-8 -right-4 md:right-8 bg-primary rounded-xl px-6 py-6 text-center max-w-[200px] shadow-lg">
+              <div className="absolute top-1/2 -translate-y-1/2 -right-[170px] bg-primary rounded-xl px-6 py-6 text-center max-w-[200px] shadow-lg">
                 <img src={iconHoney} alt="" className="w-10 h-10 mx-auto mb-3 brightness-0 invert" />
                 <h4 className="font-heebo text-lg font-bold text-primary-foreground mb-2">
                   100% Natural
