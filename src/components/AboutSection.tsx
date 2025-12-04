@@ -13,7 +13,7 @@ const AboutSection = () => {
             <span className="font-rubik text-sm font-medium text-primary tracking-wider mb-4 block">
               Quem Somos
             </span>
-            <h2 className="font-heebo text-3xl md:text-4xl font-bold text-foreground mb-8 uppercase leading-tight">
+            <h2 className="font-heebo text-[42px] font-bold text-foreground mb-8 leading-tight">
               50 Anos de Tradição, Naturalidade e Qualidade Que Atravessam Fronteiras.
             </h2>
             <a href="#about" className="btn-primary inline-block">

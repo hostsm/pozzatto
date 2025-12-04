@@ -15,8 +15,8 @@ const QualitySection = () => {
     <section id="quality" className="section-spacing">
       <div className="container-custom">
         <div className="text-center mb-12">
-          <h2 className="font-heebo text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Qualidade garantida em cada etapa
+          <h2 className="font-heebo text-[42px] font-bold text-foreground mb-4">
+            Qualidade Garantida Em Cada Etapa
           </h2>
           <p className="font-rubik text-base font-light text-muted-foreground max-w-2xl mx-auto">
             Monitoramos cada etapa com rigor técnico e transparência, garantindo segurança e precisão em todo o processo produtivo.

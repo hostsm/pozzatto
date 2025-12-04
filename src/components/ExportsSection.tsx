@@ -15,8 +15,8 @@ const ExportsSection = () => {
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="font-heebo text-3xl md:text-4xl font-bold mb-6">
-              Exportamos qualidade para o mundo
+            <h2 className="font-heebo text-[42px] font-bold mb-6">
+              Exportamos Qualidade Para o Mundo
             </h2>
             <p className="font-rubik text-base font-light opacity-90 leading-relaxed mb-8">
               A Pozzatto fornece mel e derivados para distribuidores e indústrias em vários países, com processos rigorosos de qualidade e documentação completa para exportação.

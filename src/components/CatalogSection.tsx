@@ -5,7 +5,7 @@ const CatalogSection = () => {
     <section className="section-spacing">
       <div className="container-custom">
         <div className="bg-gradient-to-r from-primary to-accent rounded-lg p-8 md:p-12 text-center">
-          <h2 className="font-heebo text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+          <h2 className="font-heebo text-[42px] font-bold text-primary-foreground mb-4">
             Catálogo Completo de Produtos
           </h2>
           <p className="font-rubik text-base font-light text-primary-foreground/90 mb-8 max-w-xl mx-auto">
