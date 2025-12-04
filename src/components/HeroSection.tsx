@@ -11,7 +11,7 @@ const features = [
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-32">
+    <section className="relative min-h-screen flex items-center pt-32 pb-32">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -25,10 +25,10 @@ const HeroSection = () => {
       {/* Content */}
       <div className="container-custom relative z-10">
         <div className="max-w-2xl">
-          <h1 className="font-heebo text-4xl md:text-5xl lg:text-6xl font-bold text-card mb-6 animate-fade-in">
+          <h1 className="font-heebo text-4xl md:text-5xl lg:text-6xl font-bold text-card mb-6 animate-fade-in text-left">
             Mel brasileiro de alta qualidade para o mercado global.
           </h1>
-          <p className="font-rubik text-lg md:text-xl font-light text-card/90 mb-8 leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <p className="font-rubik text-lg md:text-xl font-light text-card/90 mb-8 leading-relaxed animate-fade-in text-left" style={{ animationDelay: '0.2s' }}>
             Produtos derivados do mel com alto padrão de pureza para indústrias e distribuidores de todo o mundo.
           </p>
           <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
@@ -40,26 +40,25 @@ const HeroSection = () => {
             </button>
           </div>
         </div>
-      </div>
 
-      {/* Feature Cards */}
-      <div className="absolute bottom-0 left-0 right-0 z-10 translate-y-3/4">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {features.map((feature, index) => (
-              <div 
-                key={feature.label}
-                className="bg-card rounded shadow-lg p-8 flex flex-col items-center text-center card-hover animate-fade-in"
-                style={{ animationDelay: `${0.6 + index * 0.1}s` }}
-              >
-                <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                  <img src={feature.icon} alt={feature.label} className="w-14 h-14 object-contain" />
-                </div>
-                <h3 className="font-heebo font-bold text-xl text-foreground mb-2">{feature.label}</h3>
-                <p className="font-rubik text-sm text-muted-foreground">{feature.description}</p>
+        {/* Feature Cards - Glassmorphism Style */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+          {features.map((feature, index) => (
+            <div 
+              key={feature.label}
+              className="backdrop-blur-md bg-white/15 border border-white/20 rounded-lg shadow-lg p-6 animate-fade-in"
+              style={{ 
+                animationDelay: `${0.6 + index * 0.1}s`,
+                boxShadow: '0 4px 16px rgba(0,0,0,0.2)'
+              }}
+            >
+              <div className="h-11 mb-4">
+                <img src={feature.icon} alt={feature.label} className="h-11 w-auto object-contain" />
               </div>
-            ))}
-          </div>
+              <h3 className="font-heebo font-bold text-xl text-card mb-2">{feature.label}</h3>
+              <p className="font-rubik text-sm text-card/80">{feature.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
