@@ -1,10 +1,12 @@
-import { Zap, Award, Search } from 'lucide-react';
 import heroImage from '@/assets/hero-honey.jpg';
+import iconBee from '@/assets/icon-bee.png';
+import iconHoney from '@/assets/icon-honey.png';
+import iconBarcode from '@/assets/icon-barcode.svg';
 
 const features = [
-  { icon: Zap, label: 'Alta tecnologia' },
-  { icon: Award, label: 'Qualidade comprovada' },
-  { icon: Search, label: 'Rastreabilidade completa' },
+  { icon: iconBee, label: 'Alta Tecnologia', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+  { icon: iconHoney, label: 'Qualidade Comprovada', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+  { icon: iconBarcode, label: 'Rastreabilidade Completa', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
 ];
 
 const HeroSection = () => {
@@ -41,19 +43,20 @@ const HeroSection = () => {
       </div>
 
       {/* Feature Cards */}
-      <div className="absolute bottom-0 left-0 right-0 z-10 translate-y-1/2">
+      <div className="absolute bottom-0 left-0 right-0 z-10 translate-y-3/4">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {features.map((feature, index) => (
               <div 
                 key={feature.label}
-                className="bg-card rounded shadow-lg p-6 flex items-center gap-4 card-hover animate-fade-in"
+                className="bg-card rounded shadow-lg p-8 flex flex-col items-center text-center card-hover animate-fade-in"
                 style={{ animationDelay: `${0.6 + index * 0.1}s` }}
               >
-                <div className="w-12 h-12 rounded bg-primary/10 flex items-center justify-center">
-                  <feature.icon className="w-6 h-6 text-primary" />
+                <div className="w-16 h-16 mb-4 flex items-center justify-center">
+                  <img src={feature.icon} alt={feature.label} className="w-14 h-14 object-contain" />
                 </div>
-                <span className="font-rubik font-medium text-foreground">{feature.label}</span>
+                <h3 className="font-heebo font-bold text-xl text-foreground mb-2">{feature.label}</h3>
+                <p className="font-rubik text-sm text-muted-foreground">{feature.description}</p>
               </div>
             ))}
           </div>
