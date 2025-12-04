@@ -4,6 +4,7 @@ import logoPozzatto from '@/assets/logo-pozzatto.png';
 import flagBrazil from '@/assets/flag-brazil.png';
 import flagSpain from '@/assets/flag-spain.png';
 import flagUsa from '@/assets/flag-usa.png';
+import iconDownload from '@/assets/icon-download.svg';
 
 const Topbar = () => (
   <div className="bg-foreground/20 backdrop-blur-sm py-2">
@@ -29,15 +30,28 @@ const Topbar = () => (
 
 const menuItems = [
   { label: 'Home', href: '#' },
-  { label: 'A Pozzatto', href: '#about' },
+  { 
+    label: 'Quem Somos', 
+    href: '#about',
+    submenu: [
+      { label: 'Nossa História', href: '#about' },
+      { label: 'Rastreabilidade', href: '#quality' },
+      { label: 'Certificações', href: '#certifications' },
+      { label: 'Processos e Qualidade', href: '#quality' },
+    ]
+  },
   { 
     label: 'Produtos', 
     href: '#products',
-    submenu: ['Granel', 'Orgânicos', 'Compostos', 'Private Label']
+    submenu: [
+      { label: 'Linha Mesa', href: '#products' },
+      { label: 'Linha Orgânica', href: '#products' },
+      { label: 'Linha Suplemento', href: '#products' },
+      { label: 'Linha Compostos', href: '#products' },
+      { label: 'Linha à Granel', href: '#products' },
+    ]
   },
   { label: 'Exportação', href: '#exports' },
-  { label: 'Qualidade & Rastreabilidade', href: '#quality' },
-  { label: 'Certificações', href: '#certifications' },
   { label: 'Blog', href: '#blog' },
   { label: 'Contato', href: '#contact' },
 ];
@@ -97,14 +111,14 @@ const Header = () => {
                   {item.submenu && <ChevronDown className="w-3 h-3" />}
                 </a>
                 {item.submenu && activeSubmenu === item.label && (
-                  <div className="absolute top-full left-0 mt-2 bg-card shadow-lg rounded py-2 min-w-[160px]">
+                  <div className="absolute top-full left-0 mt-2 bg-card shadow-lg rounded py-2 min-w-[180px] z-50">
                     {item.submenu.map((sub) => (
                       <a 
-                        key={sub}
-                        href="#"
+                        key={sub.label}
+                        href={sub.href}
                         className="block px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-primary transition-colors"
                       >
-                        {sub}
+                        {sub.label}
                       </a>
                     ))}
                   </div>
@@ -114,8 +128,9 @@ const Header = () => {
           </nav>
 
           <div className="hidden lg:block">
-            <button className="font-rubik font-medium text-sm px-6 py-2.5 rounded border-2 border-primary bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300">
+            <button className="font-rubik font-medium text-sm px-6 py-2.5 rounded border-2 border-primary bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 flex items-center gap-2">
               Baixar Catálogo
+              <img src={iconDownload} alt="" className="w-4 h-4 brightness-0 invert" />
             </button>
           </div>
 
@@ -134,19 +149,35 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden bg-card border-t border-border">
-            <nav className="container-custom py-4 flex flex-col gap-4">
+            <nav className="container-custom py-4 flex flex-col gap-2">
               {menuItems.map((item) => (
-                <a 
-                  key={item.label}
-                  href={item.href}
-                  className="font-rubik text-sm text-foreground hover:text-primary transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                </a>
+                <div key={item.label}>
+                  <a 
+                    href={item.href}
+                    className="font-rubik text-sm text-foreground hover:text-primary transition-colors block py-2"
+                    onClick={() => !item.submenu && setIsOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                  {item.submenu && (
+                    <div className="pl-4 flex flex-col gap-1">
+                      {item.submenu.map((sub) => (
+                        <a 
+                          key={sub.label}
+                          href={sub.href}
+                          className="font-rubik text-sm text-muted-foreground hover:text-primary transition-colors block py-1"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {sub.label}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
-              <button className="btn-primary text-sm mt-4">
+              <button className="btn-primary text-sm mt-4 flex items-center gap-2 justify-center">
                 Baixar Catálogo
+                <img src={iconDownload} alt="" className="w-4 h-4 brightness-0 invert" />
               </button>
             </nav>
           </div>

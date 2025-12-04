@@ -24,7 +24,7 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="container-custom relative z-10">
-        <div className="max-w-2xl">
+        <div style={{ maxWidth: '520px' }}>
           <h1 className="font-heebo text-4xl md:text-5xl lg:text-6xl font-bold text-card mb-6 animate-fade-in text-left">
             Mel brasileiro de alta qualidade para o mercado global.
           </h1>
