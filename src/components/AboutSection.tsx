@@ -1,5 +1,5 @@
 import beesHoneycombImage from '@/assets/bees-honeycomb.png';
-import qualityControlImage from '@/assets/quality-control.jpg';
+import beekeeperImage from '@/assets/beekeeper.png';
 import iconHoney from '@/assets/icon-honey.png';
 
 const AboutSection = () => {
@@ -7,10 +7,10 @@ const AboutSection = () => {
     <section id="about" className="section-spacing pt-52">
       <div className="container-custom">
         {/* Top Content Area */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 mb-16" style={{ gap: '40px' }}>
           {/* Left Column - Title and CTA */}
           <div>
-            <span className="font-rubik text-sm font-medium text-primary uppercase tracking-wider mb-4 block">
+            <span className="font-rubik text-sm font-medium text-primary tracking-wider mb-4 block">
               Quem Somos
             </span>
             <h2 className="font-heebo text-3xl md:text-4xl font-bold text-foreground mb-8 uppercase leading-tight">
@@ -22,7 +22,7 @@ const AboutSection = () => {
           </div>
           
           {/* Right Column - Text */}
-          <div className="text-right flex flex-col justify-center">
+          <div className="text-left flex flex-col justify-center">
             <p className="font-rubik text-base font-light text-muted-foreground leading-relaxed mb-4">
               A Pozzatto é o braço internacional do tradicional Apiário Padre Assis, que há mais de 50 anos cultiva abelhas com respeito ao meio ambiente e produz mel de alta qualidade. Unimos tecnologia, experiência e manejo sustentável para atender mercados globais com excelência.
             </p>
@@ -34,28 +34,28 @@ const AboutSection = () => {
 
         {/* Images Area */}
         <div className="relative">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="flex flex-wrap" style={{ gap: '30px' }}>
             {/* First Image */}
             <div className="relative" style={{ width: '374px', height: '344px' }}>
               <img 
                 src={beesHoneycombImage} 
                 alt="Abelhas produzindo mel no favo" 
-                className="w-full h-full object-cover rounded"
+                className="w-full h-full object-cover rounded-xl"
               />
               {/* Decorative hexagon */}
               <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-primary rotate-45 -z-10" />
             </div>
             
             {/* Second Image with Badge */}
-            <div className="relative">
+            <div className="relative" style={{ width: '510px', height: '344px' }}>
               <img 
-                src={qualityControlImage} 
+                src={beekeeperImage} 
                 alt="Apicultor cuidando das colmeias" 
-                className="w-full h-80 object-cover rounded"
+                className="w-full h-full object-cover rounded-xl"
               />
               
               {/* Badge Element */}
-              <div className="absolute -bottom-8 -right-4 md:right-8 bg-primary rounded px-6 py-6 text-center max-w-[200px] shadow-lg">
+              <div className="absolute -bottom-8 -right-4 md:right-8 bg-primary rounded-xl px-6 py-6 text-center max-w-[200px] shadow-lg">
                 <img src={iconHoney} alt="" className="w-10 h-10 mx-auto mb-3 brightness-0 invert" />
                 <h4 className="font-heebo text-lg font-bold text-primary-foreground mb-2">
                   100% Natural
