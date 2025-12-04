@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import logoPozzatto from '@/assets/logo-pozzatto.png';
+import flagBrazil from '@/assets/flag-brazil.png';
+import flagSpain from '@/assets/flag-spain.png';
+import flagUsa from '@/assets/flag-usa.png';
 
 const Topbar = () => (
   <div className="bg-foreground/20 backdrop-blur-sm py-2">
@@ -9,15 +12,15 @@ const Topbar = () => (
         Atendimento ao Cliente: +55 99 99999-99
       </span>
       <span className="text-card/50">|</span>
-      <div className="flex items-center gap-2">
-        <button className="text-xl hover:scale-110 transition-transform" title="Português">
-          🇧🇷
+      <div className="flex items-center gap-3">
+        <button className="hover:scale-110 transition-transform" title="Português">
+          <img src={flagBrazil} alt="Português" className="w-5 h-auto" />
         </button>
-        <button className="text-xl hover:scale-110 transition-transform" title="Español">
-          🇪🇸
+        <button className="hover:scale-110 transition-transform" title="Español">
+          <img src={flagSpain} alt="Español" className="w-5 h-auto" />
         </button>
-        <button className="text-xl hover:scale-110 transition-transform" title="English">
-          🇺🇸
+        <button className="hover:scale-110 transition-transform" title="English">
+          <img src={flagUsa} alt="English" className="w-5 h-auto" />
         </button>
       </div>
     </div>
