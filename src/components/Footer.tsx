@@ -81,7 +81,7 @@ const Footer = () => {
       </div>
 
       {/* Copyright */}
-      <div className="border-t border-card/10">
+      <div className="border-t border-solid border-card/10">
         <div className="container-custom py-6 text-center">
           <p className="font-rubik text-sm font-light opacity-60">
             © 2024 Pozzatto - Apiário Padre Assis. Todos os direitos reservados.
