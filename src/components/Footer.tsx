@@ -1,5 +1,8 @@
 import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin } from 'lucide-react';
 import logoPozzatto from '@/assets/logo-pozzatto.png';
+import flagBrazil from '@/assets/flag-brazil.png';
+import flagSpain from '@/assets/flag-spain.png';
+import flagUsa from '@/assets/flag-usa.png';
 
 const Footer = () => {
   return (
@@ -50,15 +53,15 @@ const Footer = () => {
           {/* Languages & Social */}
           <div>
             <h4 className="font-heebo font-bold mb-4">Idiomas</h4>
-            <div className="flex gap-2 mb-6">
-              <button className="text-2xl hover:scale-110 transition-transform" title="Português">
-                🇧🇷
+            <div className="flex gap-3 mb-6">
+              <button className="hover:scale-110 transition-transform" title="Português">
+                <img src={flagBrazil} alt="Português" className="w-6 h-auto" />
               </button>
-              <button className="text-2xl hover:scale-110 transition-transform" title="Español">
-                🇪🇸
+              <button className="hover:scale-110 transition-transform" title="Español">
+                <img src={flagSpain} alt="Español" className="w-6 h-auto" />
               </button>
-              <button className="text-2xl hover:scale-110 transition-transform" title="English">
-                🇺🇸
+              <button className="hover:scale-110 transition-transform" title="English">
+                <img src={flagUsa} alt="English" className="w-6 h-auto" />
               </button>
             </div>
             <h4 className="font-heebo font-bold mb-4">Redes Sociais</h4>
