@@ -113,11 +113,7 @@ const Header = () => {
           </nav>
 
           <div className="hidden lg:block">
-            <button className={`font-rubik font-medium text-sm px-6 py-2.5 rounded border-2 transition-all duration-300 ${
-              isScrolled 
-                ? 'border-primary text-primary hover:bg-primary hover:text-primary-foreground' 
-                : 'border-primary bg-primary text-primary-foreground hover:bg-primary/90'
-            }`}>
+            <button className="font-rubik font-medium text-sm px-6 py-2.5 rounded border-2 border-primary bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300">
               Baixar Catálogo
             </button>
           </div>
