@@ -23,7 +23,7 @@ const CertificationsSection = () => {
           </div>
 
           {/* Coluna Direita - 55% com Imagens dos Certificados */}
-          <div className="lg:w-[55%] flex items-center justify-center gap-8 lg:gap-12">
+          <div className="lg:w-[55%] flex items-center justify-start gap-8 lg:gap-12">
             <img 
               src={seloSif} 
               alt="Selo SIF - Ministério da Agricultura" 
