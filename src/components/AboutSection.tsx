@@ -1,4 +1,4 @@
-import beekeepingImage from '@/assets/beekeeping.jpg';
+import beesHoneycombImage from '@/assets/bees-honeycomb.png';
 import qualityControlImage from '@/assets/quality-control.jpg';
 import iconHoney from '@/assets/icon-honey.png';
 
@@ -36,11 +36,11 @@ const AboutSection = () => {
         <div className="relative">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* First Image */}
-            <div className="relative">
+            <div className="relative" style={{ width: '374px', height: '344px' }}>
               <img 
-                src={beekeepingImage} 
+                src={beesHoneycombImage} 
                 alt="Abelhas produzindo mel no favo" 
-                className="w-full h-80 object-cover rounded"
+                className="w-full h-full object-cover rounded"
               />
               {/* Decorative hexagon */}
               <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-primary rotate-45 -z-10" />
