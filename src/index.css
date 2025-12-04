@@ -126,6 +126,19 @@
   .btn-outline {
     @apply border-2 border-primary text-primary font-rubik font-medium px-6 py-3 rounded hover:bg-primary hover:text-primary-foreground transition-all duration-300;
   }
+
+  /* Estrutura de títulos das seções */
+  .sessao-title {
+    @apply mb-4;
+  }
+
+  .sessao-title .label {
+    @apply mb-1; /* 4px gap entre label e subtitle */
+  }
+
+  .sessao-title .subtitle {
+    /* Estilos base para o subtítulo */
+  }
 }
 
 @layer utilities {

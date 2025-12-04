@@ -21,9 +21,16 @@ const BeesSection = () => {
             />
           </div>
           <div className="order-1 lg:order-2">
-            <h2 className="font-heebo text-[42px] font-bold text-foreground mb-6">
-              O Cuidado Começa Pelas Abelhas
-            </h2>
+            <div className="sessao-title mb-6">
+              <div className="label">
+                {/* Label futura */}
+              </div>
+              <div className="subtitle">
+                <h2 className="font-heebo text-[42px] font-bold text-foreground leading-tight">
+                  O Cuidado Começa Pelas Abelhas
+                </h2>
+              </div>
+            </div>
             <p className="font-rubik text-base font-light text-muted-foreground leading-relaxed mb-8">
               Nosso mel nasce do respeito às abelhas e à natureza. Mantemos colmeias saudáveis em regiões preservadas, manejadas com responsabilidade pelos nossos apicultores. Esse cuidado garante pureza, sabor e segurança em cada lote produzido.
             </p>

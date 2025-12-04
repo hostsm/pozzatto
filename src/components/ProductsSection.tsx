@@ -74,12 +74,18 @@ const ProductsSection = () => {
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
           {/* Left Column - 1/3 */}
           <div className="lg:w-1/3 flex flex-col justify-center">
-            <span className="font-rubik text-sm font-medium text-primary tracking-wider mb-3">
-              Nossos Produtos
-            </span>
-            <h2 className="font-heebo text-[42px] font-bold text-foreground mb-4 leading-tight">
-              Linha De Produtos Para Exportação
-            </h2>
+            <div className="sessao-title">
+              <div className="label">
+                <span className="font-rubik text-sm font-medium text-primary tracking-wider">
+                  Nossos Produtos
+                </span>
+              </div>
+              <div className="subtitle">
+                <h2 className="font-heebo text-[42px] font-bold text-foreground leading-tight">
+                  Linha De Produtos Para Exportação
+                </h2>
+              </div>
+            </div>
             <p className="font-rubik text-base font-light text-muted-foreground leading-relaxed mb-6">
               Lorem ipsum dolor sit amet, consectetur elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
             </p>
@@ -134,12 +140,12 @@ const ProductsSection = () => {
             </div>
 
             {/* Bullets/Dots */}
-            <div className="flex justify-center gap-2 mt-6">
+            <div className="flex justify-center gap-1 mt-6">
               {scrollSnaps.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => scrollTo(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  className={`w-3 h-[8px] rounded-full transition-all duration-300 ${
                     index === selectedIndex 
                       ? 'bg-primary w-8' 
                       : 'bg-primary/30 hover:bg-primary/50'
