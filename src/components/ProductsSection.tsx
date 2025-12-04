@@ -1,6 +1,7 @@
 import { useEffect, useState, useCallback } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
+import { ArrowRight } from 'lucide-react';
 
 import linhaMesa from '@/assets/linha-mesa.png';
 import linhaOrganica from '@/assets/linha-organica.png';
@@ -109,15 +110,22 @@ const ProductsSection = () => {
                       </div>
                       {/* Box de Informações */}
                       <div 
-                        className="bg-primary rounded-xl relative z-10 mx-[15px] py-4 px-4"
+                        className="bg-primary rounded-xl relative z-10 mx-[15px] py-4 px-4 min-h-[130px] flex flex-col"
                         style={{ marginTop: '-50px' }}
                       >
                         <h3 className="font-heebo text-xl font-bold text-primary-foreground mb-1">
                           {product.title}
                         </h3>
-                        <p className="font-rubik text-sm font-light text-primary-foreground/90 line-clamp-2">
+                        <p className="font-rubik text-sm font-light text-primary-foreground/90 line-clamp-2 mb-2">
                           {product.description}
                         </p>
+                        <a 
+                          href="#" 
+                          className="font-rubik text-sm font-medium text-primary-foreground hover:underline inline-flex items-center gap-1 mt-auto"
+                        >
+                          Saiba Mais
+                          <ArrowRight size={16} />
+                        </a>
                       </div>
                     </div>
                   </div>
