@@ -8,8 +8,8 @@ const CertificationsSection = () => {
       <div className="container-custom">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
           
-          {/* Coluna Esquerda - 1/3 */}
-          <div className="lg:w-1/3 flex flex-col justify-center">
+          {/* Coluna Esquerda - 45% */}
+          <div className="lg:w-[45%] flex flex-col justify-center">
             <SessaoTitle
               label="Qualidade Certificada"
               title="Certificações Que Fortalecem Nossa Credibilidade"
@@ -22,17 +22,17 @@ const CertificationsSection = () => {
             </button>
           </div>
 
-          {/* Coluna Direita - 2/3 com Imagens dos Certificados */}
-          <div className="lg:w-2/3 flex items-center justify-center gap-8 lg:gap-12">
+          {/* Coluna Direita - 55% com Imagens dos Certificados */}
+          <div className="lg:w-[55%] flex items-center justify-center gap-8 lg:gap-12">
             <img 
               src={seloSif} 
               alt="Selo SIF - Ministério da Agricultura" 
-              className="h-40 lg:h-52 object-contain"
+              className="max-h-[120px] object-contain"
             />
             <img 
               src={seloOrganico} 
               alt="Selo Produto Orgânico Brasil" 
-              className="h-40 lg:h-52 object-contain"
+              className="max-h-[120px] object-contain"
             />
           </div>
           
