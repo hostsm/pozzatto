@@ -1,61 +1,138 @@
-import { Package, Beaker, Tag, Building2 } from 'lucide-react';
+import { useEffect, useState, useCallback } from 'react';
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 
 const products = [
   {
-    icon: Package,
-    title: 'Mel a Granel',
-    description: 'Ideal para indústrias alimentícias, farmacêuticas e cosméticas.',
-    cta: 'Ver produtos',
+    image: 'https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=600&h=500&fit=crop',
+    title: 'Mel Puro',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   },
   {
-    icon: Beaker,
-    title: 'Mel Convencional',
-    description: 'Produção rastreada, segura e de alta qualidade.',
-    cta: 'Ver produtos',
+    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&h=500&fit=crop',
+    title: 'Mel Orgânico',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   },
   {
-    icon: Tag,
-    title: 'Compostos / Blends',
-    description: 'Desenvolvidos para aplicações específicas.',
-    cta: 'Ver produtos',
+    image: 'https://images.unsplash.com/photo-1471943311424-646960669fbc?w=600&h=500&fit=crop',
+    title: 'Mel Silvestre',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   },
   {
-    icon: Building2,
-    title: 'Private Label',
-    description: 'Soluções personalizadas para marcas internacionais.',
-    cta: 'Ver produtos',
+    image: 'https://images.unsplash.com/photo-1607530933687-5c63c6b0ea58?w=600&h=500&fit=crop',
+    title: 'Mel Composto',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1612537785954-5b4e4e0b4b2d?w=600&h=500&fit=crop',
+    title: 'Própolis',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   },
 ];
 
 const ProductsSection = () => {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { 
+      loop: true, 
+      align: 'start',
+      slidesToScroll: 1,
+      containScroll: false,
+    },
+    [Autoplay({ delay: 4000, stopOnInteraction: false })]
+  );
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
+
+  const scrollTo = useCallback(
+    (index: number) => emblaApi && emblaApi.scrollTo(index),
+    [emblaApi]
+  );
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    setScrollSnaps(emblaApi.scrollSnapList());
+    emblaApi.on('select', onSelect);
+    onSelect();
+  }, [emblaApi, onSelect]);
+
   return (
-    <section id="products" className="section-spacing">
+    <section id="products" className="section-spacing bg-background">
       <div className="container-custom">
-        <div className="text-center mb-12">
-          <h2 className="font-heebo text-3xl md:text-4xl font-bold text-foreground">
-            Nossas Linhas de Produtos
-          </h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {products.map((product) => (
-            <div 
-              key={product.title}
-              className="bg-card rounded shadow-md p-6 text-center card-hover group"
-            >
-              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                <product.icon className="w-8 h-8 text-primary" />
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+          {/* Left Column - 1/3 */}
+          <div className="lg:w-1/3 flex flex-col justify-center">
+            <span className="font-rubik text-sm font-medium text-primary uppercase tracking-wider mb-3">
+              Linha de Produtos
+            </span>
+            <h2 className="font-heebo text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Nossos Produtos
+            </h2>
+            <p className="font-rubik text-base font-light text-muted-foreground leading-relaxed mb-6">
+              Lorem ipsum dolor sit amet, consectetur elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+            </p>
+            <button className="btn-primary w-fit">
+              Nossos Produtos
+            </button>
+          </div>
+
+          {/* Right Column - 2/3 with Carousel */}
+          <div className="lg:w-2/3">
+            <div className="overflow-hidden" ref={emblaRef}>
+              <div className="flex">
+                {products.map((product, index) => (
+                  <div 
+                    key={index} 
+                    className="flex-[0_0_50%] min-w-0 pr-6"
+                  >
+                    <div className="relative rounded-xl overflow-hidden group cursor-pointer">
+                      <img
+                        src={product.image}
+                        alt={product.title}
+                        className="w-full h-[320px] object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      {/* Overlay Box */}
+                      <div className="absolute bottom-0 left-0 right-0 bg-primary p-5 rounded-t-xl">
+                        <h3 className="font-heebo text-xl font-bold text-primary-foreground mb-1">
+                          {product.title}
+                        </h3>
+                        <p className="font-rubik text-sm font-light text-primary-foreground/90 mb-3 line-clamp-2">
+                          {product.description}
+                        </p>
+                        <a 
+                          href="#" 
+                          className="font-rubik text-sm font-medium text-primary-foreground hover:underline inline-flex items-center gap-1"
+                        >
+                          Saiba Mais
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <h3 className="font-heebo text-xl font-bold text-foreground mb-3">
-                {product.title}
-              </h3>
-              <p className="font-rubik text-sm font-light text-muted-foreground mb-4 leading-relaxed">
-                {product.description}
-              </p>
-              <button className="btn-outline text-sm w-full">
-                {product.cta}
-              </button>
             </div>
-          ))}
+
+            {/* Bullets/Dots */}
+            <div className="flex justify-center gap-2 mt-6">
+              {scrollSnaps.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => scrollTo(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === selectedIndex 
+                      ? 'bg-primary w-8' 
+                      : 'bg-primary/30 hover:bg-primary/50'
+                  }`}
+                  aria-label={`Ir para slide ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
