@@ -1,6 +1,7 @@
 import beesHoneycombImage from '@/assets/bees-honeycomb.png';
 import beekeeperImage from '@/assets/beekeeper.png';
 import iconHoney from '@/assets/icon-honey.png';
+import SessaoTitle from './SessaoTitle';
 
 const AboutSection = () => {
   return (
@@ -10,18 +11,11 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 mb-16" style={{ gap: '40px' }}>
           {/* Left Column - Title and CTA */}
           <div>
-            <div className="sessao-title mb-8">
-              <div className="label">
-                <span className="font-rubik text-sm font-medium text-primary tracking-wider">
-                  Quem Somos
-                </span>
-              </div>
-              <div className="subtitle">
-                <h2 className="font-heebo text-[42px] font-bold text-foreground leading-tight">
-                  50 Anos de Tradição, Naturalidade e Qualidade Que Atravessam Fronteiras.
-                </h2>
-              </div>
-            </div>
+            <SessaoTitle
+              label="Quem Somos"
+              title="50 Anos de Tradição, Naturalidade e Qualidade Que Atravessam Fronteiras."
+              className="mb-8"
+            />
             <a href="#about" className="btn-primary inline-block">
               Conheça a Pozzatto
             </a>

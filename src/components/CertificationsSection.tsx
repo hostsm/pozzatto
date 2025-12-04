@@ -1,4 +1,5 @@
 import { Award } from 'lucide-react';
+import SessaoTitle from './SessaoTitle';
 
 const certifications = [
   'ISO 22000',
@@ -14,16 +15,10 @@ const CertificationsSection = () => {
     <section id="certifications" className="section-spacing bg-muted">
       <div className="container-custom">
         <div className="text-center mb-12">
-          <div className="sessao-title">
-            <div className="label">
-              {/* Label futura */}
-            </div>
-            <div className="subtitle">
-              <h2 className="font-heebo text-[42px] font-bold text-foreground leading-tight">
-                Certificações Que Fortalecem Nossa Credibilidade
-              </h2>
-            </div>
-          </div>
+          <SessaoTitle
+            title="Certificações Que Fortalecem Nossa Credibilidade"
+            centered
+          />
         </div>
 
         <div className="flex flex-wrap justify-center gap-6 mb-12">

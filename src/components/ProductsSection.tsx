@@ -2,6 +2,7 @@ import { useEffect, useState, useCallback } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import { ArrowRight } from 'lucide-react';
+import SessaoTitle from './SessaoTitle';
 
 import linhaMesa from '@/assets/linha-mesa.png';
 import linhaOrganica from '@/assets/linha-organica.png';
@@ -74,18 +75,10 @@ const ProductsSection = () => {
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
           {/* Left Column - 1/3 */}
           <div className="lg:w-1/3 flex flex-col justify-center">
-            <div className="sessao-title">
-              <div className="label">
-                <span className="font-rubik text-sm font-medium text-primary tracking-wider">
-                  Nossos Produtos
-                </span>
-              </div>
-              <div className="subtitle">
-                <h2 className="font-heebo text-[42px] font-bold text-foreground leading-tight">
-                  Linha De Produtos Para Exportação
-                </h2>
-              </div>
-            </div>
+            <SessaoTitle
+              label="Nossos Produtos"
+              title="Linha De Produtos Para Exportação"
+            />
             <p className="font-rubik text-base font-light text-muted-foreground leading-relaxed mb-6">
               Lorem ipsum dolor sit amet, consectetur elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
             </p>

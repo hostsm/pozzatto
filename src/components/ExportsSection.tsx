@@ -1,4 +1,5 @@
 import { Sparkles, BadgeCheck, Search, Truck, Factory, BarChart3 } from 'lucide-react';
+import SessaoTitle from './SessaoTitle';
 
 const features = [
   { icon: Sparkles, label: 'Pureza superior' },
@@ -15,16 +16,10 @@ const ExportsSection = () => {
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="sessao-title mb-6">
-              <div className="label">
-                {/* Label futura */}
-              </div>
-              <div className="subtitle">
-                <h2 className="font-heebo text-[42px] font-bold leading-tight">
-                  Exportamos Qualidade Para o Mundo
-                </h2>
-              </div>
-            </div>
+            <SessaoTitle
+              title="Exportamos Qualidade Para o Mundo"
+              className="mb-6"
+            />
             <p className="font-rubik text-base font-light opacity-90 leading-relaxed mb-8">
               A Pozzatto fornece mel e derivados para distribuidores e indústrias em vários países, com processos rigorosos de qualidade e documentação completa para exportação.
             </p>

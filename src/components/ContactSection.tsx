@@ -1,20 +1,16 @@
 import { Mail, MessageCircle } from 'lucide-react';
+import SessaoTitle from './SessaoTitle';
 
 const ContactSection = () => {
   return (
     <section id="contact" className="section-spacing">
       <div className="container-custom">
         <div className="text-center max-w-2xl mx-auto">
-          <div className="sessao-title mb-4">
-            <div className="label">
-              {/* Label futura */}
-            </div>
-            <div className="subtitle">
-              <h2 className="font-heebo text-[42px] font-bold text-foreground leading-tight">
-                Fale Com Nosso Time Internacional
-              </h2>
-            </div>
-          </div>
+          <SessaoTitle
+            title="Fale Com Nosso Time Internacional"
+            centered
+            className="mb-4"
+          />
           <p className="font-rubik text-base font-light text-muted-foreground mb-8">
             Entre em contato conosco para saber mais sobre nossos produtos e serviços de exportação.
           </p>
