@@ -9,15 +9,15 @@ const Topbar = () => (
         Atendimento ao Cliente: +55 99 99999-99
       </span>
       <span className="text-card/50">|</span>
-      <div className="flex items-center gap-3">
-        <button className="flex items-center gap-1 text-sm font-light text-card/80 hover:text-card transition-colors">
-          🇧🇷 PT
+      <div className="flex items-center gap-2">
+        <button className="text-xl hover:scale-110 transition-transform" title="Português">
+          🇧🇷
         </button>
-        <button className="flex items-center gap-1 text-sm font-light text-card/80 hover:text-card transition-colors">
-          🇪🇸 ES
+        <button className="text-xl hover:scale-110 transition-transform" title="Español">
+          🇪🇸
         </button>
-        <button className="flex items-center gap-1 text-sm font-light text-card/80 hover:text-card transition-colors">
-          🇺🇸 EN
+        <button className="text-xl hover:scale-110 transition-transform" title="English">
+          🇺🇸
         </button>
       </div>
     </div>
