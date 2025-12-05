@@ -115,6 +115,10 @@
     @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
   }
 
+  .card-highlight {
+    border-radius: 8px;
+  }
+
   .text-gradient {
     @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
   }

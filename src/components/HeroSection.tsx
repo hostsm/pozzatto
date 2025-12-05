@@ -46,7 +46,7 @@ const HeroSection = () => {
           {features.map((feature, index) => (
             <div 
               key={feature.label}
-              className="backdrop-blur-md rounded-lg p-6 animate-fade-in text-center transition-all duration-300"
+              className="backdrop-blur-md card-highlight p-6 animate-fade-in text-center transition-all duration-300"
               style={{ 
                 animationDelay: `${0.6 + index * 0.1}s`,
                 backgroundColor: 'transparent',
