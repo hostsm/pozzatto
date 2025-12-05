@@ -25,10 +25,10 @@ const HeroSection = () => {
       {/* Content */}
       <div className="container-custom relative z-10">
         <div style={{ maxWidth: '520px' }}>
-          <h1 className="font-heebo text-4xl md:text-5xl lg:text-6xl font-bold text-card mb-6 animate-fade-in text-left">
+          <h1 className="font-heebo text-4xl md:text-5xl lg:text-6xl short:text-[44px] font-bold text-card mb-6 short:mb-4 animate-fade-in text-left">
             Mel brasileiro de alta qualidade para o mercado global.
           </h1>
-          <p className="font-rubik text-lg md:text-xl font-light text-card/90 mb-8 leading-relaxed animate-fade-in text-left" style={{ animationDelay: '0.2s' }}>
+          <p className="font-rubik text-lg md:text-xl short:text-[16px] short:leading-[24px] font-light text-card/90 mb-8 short:mb-6 animate-fade-in text-left" style={{ animationDelay: '0.2s' }}>
             Produtos derivados do mel com alto padrão de pureza para indústrias e distribuidores de todo o mundo.
           </p>
           <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
@@ -42,7 +42,7 @@ const HeroSection = () => {
         </div>
 
         {/* Feature Cards - Glassmorphism Style */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-[30px]">
+        <div className="mt-16 short:mt-10 grid grid-cols-1 md:grid-cols-3 gap-[30px]">
           {features.map((feature, index) => (
             <div 
               key={feature.label}
@@ -60,7 +60,7 @@ const HeroSection = () => {
               <div className="h-11 mb-4 flex justify-center">
                 <img src={feature.icon} alt={feature.label} className="h-11 w-auto object-contain" />
               </div>
-              <h3 className="font-heebo font-semibold text-2xl text-card mb-2">{feature.label}</h3>
+              <h3 className="font-heebo font-semibold text-2xl short:text-[20px] text-card mb-2">{feature.label}</h3>
               <p className="font-rubik text-base font-light text-card/80" style={{ lineHeight: '1.3' }}>{feature.description}</p>
             </div>
           ))}

@@ -12,6 +12,9 @@ export default {
         "2xl": "1400px",
       },
     },
+    screens: {
+      'short': { 'raw': '(max-height: 1200px)' },
+    },
     extend: {
       fontFamily: {
         heebo: ["Heebo", "sans-serif"],
